@@ -1,0 +1,16 @@
+{
+	"sites": {
+		"docs": {
+			"glob": {
+				"pattern": "{docs,Sites,tags,lib,tasks}/**/*.{js,md,txt}",
+				"ignore": "lib/{configured,generate,find,generators}/test/**/*"
+			}
+		},
+		"examples/multi": {
+			"glob": "examples/multi/**/*.{js,md,txt}"
+		},
+		"examples/simple": {
+			"glob": "examples/simple/**/*.{js,md,txt}"
+		}
+	}
+}
