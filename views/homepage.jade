@@ -1,0 +1,19 @@
+html(ng-app="kitApp")
+	script(src="/javascripts/d3/d3.js")
+	script(src="/javascripts/d3/box.js")
+	script(src="/javascripts/jquery.js")
+	script(src="/javascripts/bootstrap/js/bootstrap.js")
+	script(src="/javascripts/angular.min.js")
+	script(src="/javascripts/angular-ui-router.js")
+	script(src="/javascripts/angular-route.js")
+	script(src="/javascripts/kitApp.js")
+	script(src="/javascripts/ocLazyLoad.js")
+
+	head
+		title="title"
+		link(rel='stylesheet', href='/stylesheets/style.css')
+
+	body(ng-controller="HomePageCtrl")
+		section(ui-view)
+			div#container
+				div#container-header

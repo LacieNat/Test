@@ -10,6 +10,9 @@ var users = require('./routes/users');
 
 var app = express();
 
+
+require('./models/ArtBlock');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -54,6 +57,14 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
+});
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'Connection Error:'));
+db.once('open', function callback () {
+   console.log("Mongoose Connection Successfully made");
 });
 
 
